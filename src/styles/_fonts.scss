@@ -1,0 +1,85 @@
+@use './colors';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700&family=Roboto:ital,wght@0,300;0,700;1,400&display=swap');
+
+h1 {
+    font: 700 56px "Manrope";
+    letter-spacing: 2px;
+    line-height: 58px;
+    text-transform: uppercase;
+}
+h2 {
+    font: 700 40px "Manrope";
+    letter-spacing: 1.5px;
+    line-height: 44px;
+    text-transform: uppercase;
+}
+h3 {
+    font: 700 32px "Manrope";
+    letter-spacing: 1.15px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+h4 {
+    font: 700 28px "Manrope";
+    letter-spacing: 2px;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+h5 {
+    font: 700 24px "Manrope";
+    letter-spacing: 1.7px;
+    line-height: 33px;
+    text-transform: uppercase;
+}
+h6 {
+    font: 700 18px "Manrope";
+    letter-spacing: 1.3px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.Overline {
+    font: 400 14px "Manrope";
+    letter-spacing: 10px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+.SubTitle {
+    font: 700 13px "Manrope";
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+.newProduct {
+    color: colors.$accent;
+}
+p {
+    font: 500 15px "Manrope";
+    line-height: 25px;
+}
+input, .Radio {
+    font: 700 14px "Manrope";
+    letter-spacing: -0.25px;
+    color: colors.$dark;
+    &::placeholder {
+        font: 700 14px "Manrope";
+        letter-spacing: -0.25px;
+        color: colors.$utility;
+    }
+}
+.Input .aboveBorder label, .label {
+    text-transform: capitalize;
+    color: black;
+    font: 700 12px "Manrope";
+}
+.valueTitle {
+    color: colors.$utility;
+    text-transform: uppercase;
+
+}
+.valueAmount {
+    color: black;
+    font-weight: 700;
+}
+.error {
+    font: 400 12px "Manrope"; 
+}

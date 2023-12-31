@@ -1,0 +1,35 @@
+@use "./colors";
+
+.ProductPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 60px;
+    gap: 120px;
+    .ProductAddToCart {
+        .ProductThumbnail {
+            width: 50%;
+        }
+    }
+    .backButton {
+        width: 65px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -40px;
+        cursor: pointer;
+        &:hover {
+            p {
+                color: colors.$accent;
+            }
+        }
+        p {
+            transition: color 0.2s;
+        }
+    }
+    .ProductDetails {
+        margin-bottom: 85px;
+    }
+}

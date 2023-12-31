@@ -1,0 +1,1230 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700&family=Roboto:ital,wght@0,300;0,700;1,400&display=swap");
+h1 {
+  font: 700 56px "Manrope";
+  letter-spacing: 2px;
+  line-height: 58px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: 700 40px "Manrope";
+  letter-spacing: 1.5px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font: 700 32px "Manrope";
+  letter-spacing: 1.15px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font: 700 28px "Manrope";
+  letter-spacing: 2px;
+  line-height: 38px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font: 700 24px "Manrope";
+  letter-spacing: 1.7px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+
+h6 {
+  font: 700 18px "Manrope";
+  letter-spacing: 1.3px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.Overline {
+  font: 400 14px "Manrope";
+  letter-spacing: 10px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.SubTitle {
+  font: 700 13px "Manrope";
+  letter-spacing: 1px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.newProduct {
+  color: #D87D4A;
+}
+
+p {
+  font: 500 15px "Manrope";
+  line-height: 25px;
+}
+
+input, .Radio {
+  font: 700 14px "Manrope";
+  letter-spacing: -0.25px;
+  color: #000;
+}
+input::placeholder, .Radio::placeholder {
+  font: 700 14px "Manrope";
+  letter-spacing: -0.25px;
+  color: #00000076;
+}
+
+.Input .aboveBorder label, .label {
+  text-transform: capitalize;
+  color: black;
+  font: 700 12px "Manrope";
+}
+
+.valueTitle {
+  color: #00000076;
+  text-transform: uppercase;
+}
+
+.valueAmount {
+  color: black;
+  font-weight: 700;
+}
+
+.error {
+  font: 400 12px "Manrope";
+}
+
+button {
+  outline: none !important;
+}
+
+.button1, .button2, .button3, .button4 {
+  font: 700 13px "Manrope";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: color 0.2s, background-color 0.2s;
+}
+.button1:hover, .button2:hover, .button3:hover, .button4:hover {
+  outline: 0 !important;
+}
+
+.button1 {
+  color: white;
+  background-color: #D87D4A;
+}
+.button1:hover, .button1:focus {
+  background-color: #fbaf85;
+}
+
+.button2 {
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+.button2:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.button3 {
+  color: #00000076;
+  transition: color 0.2s;
+  display: inline-block;
+}
+.button3:hover {
+  color: #D87D4A;
+}
+.button3::after {
+  content: ">";
+  color: #D87D4A;
+}
+
+.button4 {
+  color: white;
+  background-color: #000;
+}
+.button4:hover, .button4:focus {
+  background-color: #4C4C4C;
+}
+
+.Input, .InputFull {
+  width: 100%;
+}
+
+.Input {
+  display: flex;
+  flex-direction: column;
+}
+.Input .aboveBorder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.Input .aboveBorder .error {
+  display: none;
+  color: red;
+}
+.Input .aboveBorder .errorActive {
+  display: inline;
+}
+.Input .input {
+  border: 1px solid #CFCFCF;
+  border-radius: 5px;
+  padding: 0.7rem 1.2rem;
+}
+.Input .input:focus {
+  outline: none;
+  border-color: #D87D4A;
+}
+.Input .inputError {
+  border: 2px solid red;
+}
+
+.Radio {
+  border: 1.5px solid #00000076;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+  width: 230px;
+  height: 45px;
+  border-radius: 5px;
+  padding-left: 10px;
+  transition: border 0.2s;
+}
+.Radio:hover {
+  border-color: #D87D4A;
+}
+.Radio .radioCircle {
+  height: 15px;
+  width: 15px;
+  border: 1px solid #00000076;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Radio .radioCircle .radioCircleCenterActive {
+  height: 7px;
+  width: 7px;
+  background-color: #D87D4A;
+  border-radius: 50%;
+}
+
+.RadioActive {
+  border: 1.5px solid #D87D4A !important;
+}
+
+.Counter, .CartCounter {
+  background-color: #F1F1F1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10%;
+  cursor: pointer;
+}
+.Counter .counterButton, .CartCounter .counterButton {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Counter .counterButton:hover .counterButtonText, .CartCounter .counterButton:hover .counterButtonText {
+  color: #D87D4A;
+}
+.Counter .counterButton .counterButtonText, .CartCounter .counterButton .counterButtonText {
+  color: #00000076;
+  transition: color 0.2s;
+}
+.Counter .counterButtonDisabled:hover .counterButtonText, .CartCounter .counterButtonDisabled:hover .counterButtonText {
+  color: #d9dedb;
+}
+.Counter .counterButtonDisabled .counterButtonText, .CartCounter .counterButtonDisabled .counterButtonText {
+  color: #d9dedb;
+}
+
+.Counter {
+  width: 120px;
+  height: 48px;
+}
+.Counter .counterButton {
+  width: 40px;
+}
+.Counter .counterNumber {
+  border: none;
+  width: 30px;
+  padding-left: 10px;
+  background-color: transparent;
+}
+.Counter .counterNumber:focus {
+  outline: 0;
+}
+.Counter .counterNumber::-webkit-inner-spin-button {
+  display: none;
+}
+
+.CartCounter {
+  width: 35%;
+  height: 50%;
+}
+.CartCounter .counterButton {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CartCounter .counterButton:hover .counterButtonText {
+  color: #D87D4A;
+}
+.CartCounter .counterButton .counterButtonText {
+  color: #00000076;
+  transition: color 0.2s;
+}
+.CartCounter .counterButtonDisabled:hover .counterButtonText {
+  color: #d9dedb;
+}
+.CartCounter .counterButtonDisabled .counterButtonText {
+  color: #d9dedb;
+}
+.CartCounter .counterNumber {
+  color: black;
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  padding-left: 10px;
+}
+.CartCounter .counterNumber:focus {
+  outline: 0;
+}
+.CartCounter .counterNumber::-webkit-inner-spin-button {
+  display: none;
+}
+
+.CategoryIconList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 280px;
+  gap: 5%;
+}
+.CategoryIconList a {
+  width: 30%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.CategoryIconList a:hover {
+  color: inherit;
+}
+.CategoryIconList a:hover .button3 {
+  color: #D87D4A;
+}
+.CategoryIconList .CategoryIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #F1F1F1 30%);
+}
+.CategoryIconList .CategoryIcon img {
+  width: 60%;
+}
+
+.productListings {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -120px;
+}
+
+.ProductListing, .ProductAddToCart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10%;
+  width: 100%;
+  height: 40vw;
+}
+.ProductListing .ProductThumbnail, .ProductAddToCart .ProductThumbnail {
+  width: 40%;
+}
+.ProductListing .ProductThumbnail img, .ProductAddToCart .ProductThumbnail img {
+  width: 100%;
+}
+.ProductListing .productInfo, .ProductAddToCart .productInfo {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 40%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 15%;
+}
+.ProductListing .productInfo .buttons, .ProductAddToCart .productInfo .buttons {
+  display: flex;
+  gap: 7%;
+}
+.ProductListing .productInfo .buttons button, .ProductAddToCart .productInfo .buttons button {
+  height: 48px;
+  width: 160px;
+}
+
+.ProductListingLeft {
+  flex-direction: row-reverse;
+}
+
+.ProductDetails {
+  display: flex;
+  gap: 10%;
+  width: 100%;
+}
+.ProductDetails .features, .ProductDetails .inBox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.ProductDetails .features {
+  width: 50%;
+}
+.ProductDetails .features .featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.ProductDetails .inBox {
+  width: 40%;
+}
+.ProductDetails .inBox .items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+}
+.ProductDetails .inBox .items .item {
+  display: flex;
+  gap: 5%;
+  width: 100%;
+}
+.ProductDetails .inBox .items .item .quantity, .ProductDetails .inBox .items .item .name {
+  text-align: left;
+}
+.ProductDetails .inBox .items .item .quantity {
+  color: #D87D4A;
+  font-weight: 700;
+}
+
+.Gallery {
+  display: flex;
+  gap: 3%;
+  width: 100%;
+  margin-top: -80px;
+}
+.Gallery img {
+  border-radius: 10px;
+}
+.Gallery .sideImages {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 6%;
+}
+.Gallery .sideImages .sideImage {
+  height: 47%;
+}
+.Gallery .bigImage {
+  width: 50%;
+}
+
+.LikeProducts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.LikeProducts .productsShown {
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.LikeProducts .ProductSuggestion {
+  width: 30%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.LikeProducts .ProductSuggestion img {
+  width: 100%;
+}
+
+.PageEnder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 10%;
+}
+.PageEnder .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  height: 50%;
+  width: 45%;
+}
+.PageEnder .text h2 .hilightedText {
+  color: #D87D4A;
+}
+.PageEnder img {
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.Home, .ProductPage, .ProductCategoryPage, .NotFoundPage, .CheckoutPage {
+  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.Home .underHero, .ProductCategoryPage .underBar, .ProductPage, .CheckoutPage {
+  padding: 0 10%;
+}
+
+.NotFoundPage {
+  gap: 100px;
+}
+.NotFoundPage .button1 {
+  width: 300px;
+  height: 60px;
+  margin-bottom: 50px;
+}
+.NotFoundPage .pageTitle {
+  color: white;
+  background-color: #000;
+  height: 30vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -50%;
+}
+
+.ProductCategoryPage {
+  gap: 170px;
+}
+.ProductCategoryPage .underBar {
+  gap: 170px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.ProductCategoryPage .pageTitle {
+  color: white;
+  background-color: #000;
+  height: 30vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -50%;
+}
+
+.Home .hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 550px;
+  width: 100%;
+  padding-left: 10%;
+  background-image: url("../assets/home/desktop/image-hero.jpg");
+  background-color: #000;
+  background-size: cover;
+  background-position: right 25% top 75%;
+  background-repeat: no-repeat;
+  margin-bottom: 8%;
+}
+.Home .hero .heroContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  width: 30%;
+  color: white;
+}
+.Home .underHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+}
+.Home .underHero .homePageProducts {
+  height: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2%;
+}
+.Home .underHero .homePageProducts .zx9Speaker {
+  width: 100%;
+  height: 40% !important;
+  display: flex;
+  border-radius: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+  background-image: url("../assets/home/desktop/image-speaker-zx9.png");
+  background-color: #D87D4A;
+  background-size: 32%;
+  background-position: 20% 100px;
+  background-repeat: no-repeat;
+}
+.Home .underHero .homePageProducts .zx9Speaker .zx9SpeakerContainer {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  color: white;
+}
+.Home .underHero .homePageProducts .zx7Speaker, .Home .underHero .homePageProducts .yx1Earphones {
+  height: 25% !important;
+}
+.Home .underHero .homePageProducts .zx7Speaker {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40%;
+  padding-left: 10%;
+  background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
+}
+.Home .underHero .homePageProducts .yx1Earphones {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+}
+.Home .underHero .homePageProducts .yx1Earphones .yx1Image, .Home .underHero .homePageProducts .yx1Earphones .homeProductContainer {
+  width: 47.5%;
+  height: 100%;
+  border-radius: 10px;
+}
+.Home .underHero .homePageProducts .yx1Earphones .yx1Image {
+  background-image: url("../assets/home/desktop/image-earphones-yx1.jpg");
+}
+.Home .underHero .homePageProducts .yx1Earphones .homeProductContainer {
+  background-color: #F1F1F1;
+  justify-content: center;
+  gap: 10%;
+  padding-left: 10%;
+}
+.Home .underHero .homePageProducts .homeProductContainer {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Navbar, .Footer {
+  width: 100%;
+  max-width: 100%;
+}
+
+.Navbar {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  z-index: 9;
+}
+.Navbar .container {
+  width: 85%;
+  height: 100%;
+  border-bottom: 1px solid #97979750;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Navbar .container .navText {
+  width: 62%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Navbar .container .navText .logo {
+  cursor: pointer;
+}
+.Navbar .container .navText .navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  text-align: center;
+  text-decoration: none;
+}
+.Navbar .container .navText .navLinks .navLink {
+  color: white;
+  transition: color 0.2s;
+}
+.Navbar .container .navText .navLinks .navLink:hover {
+  color: #D87D4A;
+}
+.Navbar .container .cartToggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Navbar .container .cartToggle:hover {
+  background-color: #4C4C4C;
+}
+.Navbar .container .cartToggleDisabled {
+  display: none;
+}
+
+.Footer {
+  height: 365px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 10%;
+}
+.Footer .footerLeft, .Footer .footerRight {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.Footer .footerLeft {
+  gap: 40px;
+  align-items: flex-start;
+  color: #FFFFFF70;
+}
+.Footer .footerLeft .bar {
+  width: 20%;
+  border-top: 4px solid #D87D4A;
+  margin-bottom: 30px;
+}
+.Footer .footerLeft .logo {
+  width: 30%;
+}
+.Footer .footerRight {
+  align-items: flex-end;
+  gap: 80px;
+}
+.Footer .footerRight .footerNav {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+}
+.Footer .footerRight .footerNav * {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s;
+}
+.Footer .footerRight .footerNav *:hover {
+  color: #D87D4A;
+}
+.Footer .footerRight .footerSocials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+}
+.Footer .footerRight .footerSocials svg {
+  cursor: pointer;
+  transition: color 0.2s;
+  color: white;
+}
+.Footer .footerRight .footerSocials svg:hover {
+  color: #D87D4A !important;
+}
+
+.ProductPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 60px;
+  gap: 120px;
+}
+.ProductPage .ProductAddToCart .ProductThumbnail {
+  width: 50%;
+}
+.ProductPage .backButton {
+  width: 65px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -40px;
+  cursor: pointer;
+}
+.ProductPage .backButton:hover p {
+  color: #D87D4A;
+}
+.ProductPage .backButton p {
+  transition: color 0.2s;
+}
+.ProductPage .ProductDetails {
+  margin-bottom: 85px;
+}
+
+.CartModal .Modal .overlay .content {
+  height: auto;
+  max-height: 800px;
+  width: 28%;
+  top: 100px;
+  right: 150px;
+}
+.CartModal .Modal .overlay .content .Cart {
+  z-index: 9;
+}
+.CartModal .Modal .overlay .content .Cart .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10%;
+  gap: 40px;
+}
+.CartModal .Modal .overlay .content .Cart .container .cartTop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.CartModal .Modal .overlay .content .Cart .container .cartTop .removeAllButton {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.CartModal .Modal .overlay .content .Cart .container .cartTop .removeAllButton:hover {
+  color: #D87D4A;
+  text-decoration: underline;
+}
+.CartModal .Modal .overlay .content .Cart .container .itemList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  gap: 15px;
+  overflow-y: auto;
+}
+.CartModal .Modal .overlay .content .Cart .container .itemList::-webkit-scrollbar {
+  width: 8px;
+}
+.CartModal .Modal .overlay .content .Cart .container .itemList::-webkit-scrollbar-track {
+  background-color: #fbaf85;
+}
+.CartModal .Modal .overlay .content .Cart .container .itemList::-webkit-scrollbar-thumb {
+  background-color: #D87D4A;
+}
+.CartModal .Modal .overlay .content .Cart .container .cartBottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  gap: 30%;
+}
+.CartModal .Modal .overlay .content .Cart .container .cartBottom .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.CartModal .Modal .overlay .content .Cart .container .cartBottom .button1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  height: 40px;
+}
+
+.CheckoutPage {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 60px 100px 100px;
+  background-color: #F1F1F1;
+}
+.CheckoutPage .backButton {
+  width: 65px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.CheckoutPage .backButton:hover p {
+  color: #D87D4A;
+}
+.CheckoutPage .backButton p {
+  transition: color 0.2s;
+}
+.CheckoutPage .checkoutContent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3%;
+}
+.CheckoutPage .checkoutContent .form, .CheckoutPage .checkoutContent .summary {
+  border-radius: 10px;
+}
+.CheckoutPage .checkoutContent .form {
+  background-color: white;
+  width: 70%;
+  padding: 5% 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+.CheckoutPage .checkoutContent .form .section {
+  width: 100%;
+}
+.CheckoutPage .checkoutContent .form .section .sectionTitle {
+  margin-bottom: 10px;
+  color: #D87D4A;
+}
+.CheckoutPage .checkoutContent .form .section .inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 2%;
+}
+.CheckoutPage .checkoutContent .form .section .inputs .InputFull {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.CheckoutPage .checkoutContent .form .section .inputsEnd {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.CheckoutPage .checkoutContent .form .section .inputsEnd .paymentMethod {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.CheckoutPage .checkoutContent .form .section .inputsEnd .paymentMethod .radios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.CheckoutPage .checkoutContent .form .section .inputsEnd .paymentMethodInputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.CheckoutPage .checkoutContent .form .section .inputsEnd .paymentMethodInputs .Input .aboveBorder label {
+  text-transform: none;
+}
+.CheckoutPage .checkoutContent .summary {
+  background-color: white;
+  width: 30%;
+  padding: 2%;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer h6 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer .checkoutItems {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer .checkoutItems .CartItem .leftContainer .productInfo {
+  margin-left: 5px;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer .summaryInfo {
+  width: 100%;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer .summaryInfo .preCalculation {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer .summaryInfo .infoItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer .summaryInfo .infoItem .total {
+  color: #D87D4A;
+  font-weight: 700;
+}
+.CheckoutPage .checkoutContent .summary .summaryContainer button {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.CartItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.CartItem .leftContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  gap: 5%;
+  height: 100%;
+}
+.CartItem .leftContainer img {
+  border-radius: 10px;
+}
+.CartItem .leftContainer .productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.CartItem .leftContainer .productInfo .cartItemTitle {
+  color: black;
+  font-weight: bold;
+}
+.CartItem .leftContainer .productInfo .cartItemPrice {
+  color: #00000076;
+  font-weight: bold;
+}
+.CartItem .quantity {
+  align-self: flex-start;
+}
+
+.CartItemCart {
+  height: 70px;
+}
+.CartItemCart img {
+  width: 64px;
+  height: 64px;
+}
+
+.CartItemCheckout {
+  height: 50px;
+}
+.CartItemCheckout img {
+  width: 50px;
+  height: 50px;
+}
+
+.Modal .overlay {
+  position: fixed;
+  height: 120%;
+  width: 100%;
+  background-color: #00000050;
+  z-index: 8;
+}
+.Modal .overlay .content {
+  position: absolute;
+  z-index: 9;
+  background-color: white;
+  border-radius: 10px;
+  height: auto;
+}
+
+.displayNone {
+  display: none;
+}
+
+.CheckoutModal .Modal .overlay .content {
+  box-sizing: border-box;
+  max-height: 490px;
+  width: 540px;
+  top: 90px;
+  right: 320px;
+  padding: 2% 5%;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .check {
+  width: 12%;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .thanks h3 {
+  font-size: 28px;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .thanks h3:nth-child(2) {
+  margin-top: -5px;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .receive {
+  color: #00000076;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails {
+  width: 100%;
+  max-height: 210px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft {
+  background-color: #F1F1F1;
+  width: 60%;
+  padding: 20px 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border-radius: 10px 0 0 10px;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .top, .CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .top .itemsExpanded .itemsList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .top {
+  padding-top: 10px;
+  overflow-y: auto;
+  height: auto;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .top::-webkit-scrollbar {
+  width: 8px;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .top::-webkit-scrollbar-track {
+  background-color: #FAFAFA;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .top::-webkit-scrollbar-thumb {
+  background-color: #00000076;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .toggles {
+  border-top: 1px solid #00000076;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsLeft .toggles .displayToggle {
+  cursor: pointer;
+  color: #00000076;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsRight {
+  background-color: #000;
+  width: 40%;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsRight .totalInfo {
+  display: flex;
+  flex-direction: column;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsRight .totalInfo .valueTitle {
+  color: #FFFFFF70;
+  font-weight: 400;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetails .detailsRight .totalInfo .valueAmount {
+  color: white;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .buttonLink {
+  width: 100%;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .buttonLink button {
+  width: 100%;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetailsExpanded .top {
+  padding-top: 30px !important;
+}
+.CheckoutModal .Modal .overlay .content .CheckoutSuccess .orderDetailsExpanded .detailsRight {
+  justify-content: flex-end;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

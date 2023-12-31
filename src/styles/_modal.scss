@@ -1,0 +1,19 @@
+.Modal {
+    .overlay {
+        position: fixed;
+        height: 120%;
+        width: 100%;
+        background-color: #00000050;
+        z-index: 8;
+        .content {
+            position: absolute;
+            z-index: 9;
+            background-color: white;
+            border-radius: 10px;
+            height: auto;
+        }
+    }
+}
+.displayNone {
+    display: none;
+}

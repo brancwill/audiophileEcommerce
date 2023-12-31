@@ -1,0 +1,123 @@
+@use './colors';
+
+.CheckoutModal {
+    .Modal {
+        .overlay {
+            .content {
+                box-sizing: border-box;
+                max-height: 490px;
+                width: 540px;
+                top: 90px;
+                right: 320px;
+                padding: 2% 5%;
+                .CheckoutSuccess {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: flex-start;
+                    gap: 10px;
+                    height: 100%;
+                    width: 100%;
+                    .check {
+                        width: 12%;
+                    }
+                    .thanks {
+                        h3 {
+                            font-size: 28px;
+                            &:nth-child(2) {
+                                margin-top: -5px;
+                            }
+                        }
+                    }
+                    .receive {
+                        color: colors.$utility;
+                    }
+                    .orderDetails {
+                        width: 100%;
+                        max-height: 210px;
+                        display: flex;
+                        margin-bottom: 10px;
+                        .detailsLeft {
+                            background-color: colors.$light;
+                            width: 60%;
+                            padding: 20px 5%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            align-items: center;
+                            border-radius: 10px 0 0 10px;
+                            .top, .top .itemsExpanded .itemsList {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-evenly;
+                                gap: 15px;
+                            }
+                            .top {
+                                padding-top: 10px;
+                                overflow-y: auto;
+                                height: auto;
+                                &::-webkit-scrollbar {
+                                    width: 8px;
+                                }
+                                &::-webkit-scrollbar-track {
+                                    background-color: colors.$lightHilight;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    background-color: colors.$utility;
+                                }
+                            }
+                            .toggles {
+                                border-top: 1px solid colors.$utility;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding-top: 10px;
+                                .displayToggle {
+                                    cursor: pointer;
+                                    color: colors.$utility
+                                }
+                            }
+                        }
+                        .detailsRight {
+                            background-color: colors.$dark;
+                            width: 40%;
+                            border-radius: 0 10px 10px 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 5%;
+                            .totalInfo {
+                                display: flex;
+                                flex-direction: column;
+                                .valueTitle {
+                                    color: #FFFFFF70;
+                                    font-weight: 400;
+                                }
+                                .valueAmount {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    .buttonLink {
+                        width: 100%;
+                        button {
+                            width: 100%;
+                        }
+                    }
+                    .orderDetailsExpanded {
+                        .top {
+                            padding-top: 30px !important;
+                        }
+                        .detailsRight {
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

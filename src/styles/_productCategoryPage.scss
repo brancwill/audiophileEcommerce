@@ -1,0 +1,25 @@
+@use './colors';
+
+.ProductCategoryPage {
+    gap: 170px;
+    .underBar {
+        gap: 170px;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .pageTitle {
+        color: white;
+        background-color: colors.$dark;
+        height: 30vh;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -50%;
+    }
+}

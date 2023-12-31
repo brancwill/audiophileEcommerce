@@ -1,0 +1,50 @@
+@use './colors';
+
+button {
+    outline: none !important;
+}
+.button1, .button2, .button3, .button4 {
+    font: 700 13px "Manrope";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: color 0.2s, background-color 0.2s;
+    &:hover {
+        outline: 0 !important;
+    }
+}
+.button1 {
+    color: white;
+    background-color: colors.$accent;
+    &:hover, &:focus {
+        background-color: colors.$accentHilight;
+    }
+}
+.button2 {
+    color: colors.$dark;
+    background-color: transparent;
+    border: 1px solid colors.$dark;
+    &:hover {
+        color: colors.$background;
+        background-color: colors.$dark;
+    }
+}
+.button3 {
+    color: colors.$utility;
+    transition: color 0.2s;
+    display: inline-block;
+    &:hover {
+        color: colors.$accent;
+    }
+    &::after {
+        content: '>';
+        color: colors.$accent;
+    }
+}
+.button4 {
+    color: white;
+    background-color: colors.$dark;
+    &:hover, &:focus {
+        background-color: colors.$darkHilight;
+    }
+}

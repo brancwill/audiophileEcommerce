@@ -1,0 +1,145 @@
+@use './colors';
+
+.CheckoutPage {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 60px 100px 100px;
+    background-color: colors.$light;
+    .backButton {
+        width: 65px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        cursor: pointer;
+        &:hover {
+            p {
+                color: colors.$accent;
+            }
+        }
+        p {
+            transition: color 0.2s;
+        }
+    }
+    .checkoutContent {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 3%;
+        .form, .summary {
+            border-radius: 10px
+        }
+        .form {
+            background-color: white;
+            width: 70%;
+            padding: 5% 3%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 40px;
+            .section {
+                width: 100%;
+                .sectionTitle {
+                    margin-bottom: 10px;
+                    color: colors.$accent;
+                }
+                .inputs {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    column-gap: 2%;
+                    .InputFull {
+                        grid-column-start: 1;
+                        grid-column-end: 3;
+                    }
+                }
+                .inputsEnd {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .paymentMethod {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        .radios {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                    }
+                    .paymentMethodInputs {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 15px;
+                        .Input {
+                            .aboveBorder {
+                                label {
+                                    text-transform: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .summary {
+            background-color: white;
+            width: 30%;
+            padding: 2%;
+            .summaryContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+                h6 {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .checkoutItems {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    gap: 20px;
+                    .CartItem {
+                        .leftContainer {
+                            .productInfo {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+                .summaryInfo {
+                    width: 100%;
+                    .preCalculation {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        margin-bottom: 20px;
+                    }
+                    .infoItem {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .total {
+                            color: colors.$accent;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                button {
+                    width: 100%;
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
