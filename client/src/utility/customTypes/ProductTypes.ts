@@ -42,8 +42,8 @@ export interface Product {
 export interface ProductState {
     currentProduct: Product;
     setCurrentProduct: React.Dispatch<React.SetStateAction<Product>>; 
-    retrieveProductCategory: Function;
-    retrieveProduct: Function;
+    currentCategory: Product[];
+    setCurrentCategory: React.Dispatch<React.SetStateAction<Product[]>>;
 }
 
 //Empty Interfaces

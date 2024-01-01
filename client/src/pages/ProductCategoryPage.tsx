@@ -1,7 +1,7 @@
 //Imports ------------
 
 //React/Router Imports
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 //Component Imports
@@ -12,37 +12,41 @@ import ProductListing from "../components/ProductListing";
 //Context Imports
 import { useProductContext } from "../context/ProductContext";
 
-//Utility Imports
-import { Product } from "../utility/customTypes/ProductTypes";
-
 //Component --------------
 const ProductCategoryPage = () => {
+
+    const getProducts = () => {
+        fetch(`http://localhost:8800/api/${productCategory}`)
+            .then(res => res.json())
+            .then(data => setCurrentCategory(data));
+    }
 
     //React Hooks -----------
 
     //Context
-    const { retrieveProductCategory } = useProductContext();
+    const { currentCategory, setCurrentCategory } = useProductContext();
 
     //Router
     let { productCategory } = useParams();
     const navigate = useNavigate();
 
-    //State
-    const [ retrievedCategory, setRetrievedCategory ] = useState<Product[]>();
+    //Variables ----------------
+    const pages: string[] = [ "earphones", "headphones", "speakers" ];
 
     //useEffect
     useEffect(() => {
-        //Retrieves category information to pupulate page.
-        const chosenProductCategory = retrieveProductCategory(productCategory);
 
-        //If category is found, populates page.
-        if( chosenProductCategory.length >= 1 ) {
-            setRetrievedCategory(chosenProductCategory);
+        if (productCategory) {
+            //If category is found, populates page.
+            if( pages.includes( productCategory ) ) {
+                getProducts();
+            }
+            //If not, redirects to "Not Found" page.
+            else {
+                navigate("/page-not-found");
+            }
         }
-        //If not, redirects to "Not Found" page.
-        else {
-            navigate("/page-not-found");
-        }
+        
     }, [productCategory])
 
     return (
@@ -51,8 +55,8 @@ const ProductCategoryPage = () => {
             <div className="underBar">
                 <div className="productListings">
                     {
-                            retrievedCategory ? 
-                            retrievedCategory.map((product, index) => {
+                            currentCategory ? 
+                            currentCategory.map((product, index) => {
                                 return <ProductListing product={product} 
                                                        isLeftOriented={index % 2 === 0 ? true : false} 
                                                        key={index} 

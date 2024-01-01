@@ -4,7 +4,6 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 
 //Utility Imports
-import data from "../data.json";
 import { emptyProduct, Product, ProductState } from "../utility/customTypes/ProductTypes";
 
 
@@ -29,25 +28,15 @@ export const ProductContextProvider: React.FC<{ children: ReactNode }> = ({ chil
     //React Hooks ----------
 
     //State
+    const [ currentCategory, setCurrentCategory ] = useState<Product[]>([]);
     const [ currentProduct, setCurrentProduct ] = useState<Product>(emptyProduct);
-
-    //Functions --------------
-    const retrieveProductCategory: Function = (givenCategory: string): Product[] => {
-        //Retrieves product category based on title of category.
-        return data.filter((product) => product.category === givenCategory)
-    }
-    const retrieveProduct: Function = ( productCategory: string, productSlug: string): Product => {
-        //Retrieves product category based on title of category and product slug.
-        const singleProductArray = retrieveProductCategory(productCategory).filter((product: Product) => product.slug === productSlug);
-        return singleProductArray[0]
-    }
 
     //Context to pass
     const contextValue: ProductState = {
         currentProduct,
         setCurrentProduct,
-        retrieveProductCategory,
-        retrieveProduct
+        currentCategory,
+        setCurrentCategory,
       }
   
     return (

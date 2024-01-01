@@ -21,20 +21,25 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
     //React Hooks ------------
 
     //Context
-    const { retrieveProduct, setCurrentProduct } = useProductContext();
+    const { currentProduct, setCurrentProduct } = useProductContext();
 
     //Router
     const navigate = useNavigate();
     let { productCategory, productSlug } = useParams();
     
+    //Functions ---------------
+
+    //Product Retrieval
+    const getProduct = () => {
+        fetch(`http://localhost:8800/api/${productCategory}/${productSlug}`)
+            .then(res => res.json())
+            .then(data => setCurrentProduct(data[0]))
+    }
 
     useEffect(() => {
-        //Retrieves product information to pupulate page.
-        const product = retrieveProduct(productCategory, productSlug);
-
         //If product is found, populates page.
-        if(product !== undefined) {
-            setCurrentProduct(product);
+        if(currentProduct !== undefined) {
+            getProduct();
         }
         //If not, redirects to "Not Found" page.
         else {
