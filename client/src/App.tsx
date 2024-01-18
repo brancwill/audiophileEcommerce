@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useCartContext } from './context/CartContext';
 
 //Component Imports
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -40,7 +40,7 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ProductContextProvider>
           <Navbar isOpen={isCartOpen} setIsOpen={setIsCartOpen}/>
           <ScrollToTop />
@@ -55,7 +55,7 @@ function App() {
             </Routes>
           <Footer />
       </ProductContextProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

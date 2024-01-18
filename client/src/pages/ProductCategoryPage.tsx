@@ -55,7 +55,7 @@ const ProductCategoryPage = () => {
             <div className="underBar">
                 <div className={ productCategory !== 'speakers' ? "productListings" : "productListings productListingsReverse"}>
                     {
-                            currentCategory ? 
+                            currentCategory && currentCategory.length > 0 ? 
                             currentCategory.map((product, index) => {
                                 return <ProductListing product={product} 
                                                        isLeftOriented={index % 2 !== 0 ? true : false} 
