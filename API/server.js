@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require("cors");
 const mysql = require("mysql2");
+require('dotenv').config();
 
 // Variables ------------
 const app = express();
@@ -11,11 +12,20 @@ app.use(cors())
 
 // MySQL Connection ---------
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "Brandon",
-    password: "brandonsql",
-    database: "data"
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USERNAME,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
+    ssl: {
+        rejectUnauthorized: true
+    }
 });
+
+db.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected to Planetscale.");
+    process.exit(0)
+})
 
 // Endpoints -------------
 app.get("/api/:category", (req, res) => {
