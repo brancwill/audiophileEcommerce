@@ -31,12 +31,23 @@ export const ProductContextProvider: React.FC<{ children: ReactNode }> = ({ chil
     const [ currentCategory, setCurrentCategory ] = useState<Product[]>([]);
     const [ currentProduct, setCurrentProduct ] = useState<Product>(emptyProduct);
 
+    //Functions
+    const clearCategory: Function = (): void => {
+      setCurrentCategory([]);
+    }
+
+    const clearProduct: Function = (): void => {
+      setCurrentProduct(emptyProduct);
+    }
+
     //Context to pass
     const contextValue: ProductState = {
         currentProduct,
         setCurrentProduct,
         currentCategory,
         setCurrentCategory,
+        clearCategory,
+        clearProduct
       }
   
     return (

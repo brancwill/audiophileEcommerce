@@ -43,7 +43,7 @@
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
-            // transition: background-size 500ms ease-in-out;
+            transition: background-size 500ms ease-in-out;
             &:hover {
                 background-size: 120%;
             }

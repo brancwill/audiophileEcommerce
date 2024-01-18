@@ -15,8 +15,9 @@ import { useProductContext } from "../context/ProductContext";
 //Component --------------
 const ProductCategoryPage = () => {
 
-    const getProducts = () => {
-        fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}`, {
+    const getProducts = async () => {
+        clearCategory();
+        await fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}`, {
             method: "GET",
             mode: 'cors'
         })
@@ -27,7 +28,7 @@ const ProductCategoryPage = () => {
     //React Hooks -----------
 
     //Context
-    const { currentCategory, setCurrentCategory } = useProductContext();
+    const { currentCategory, setCurrentCategory, clearCategory } = useProductContext();
 
     //Router
     let { productCategory } = useParams();

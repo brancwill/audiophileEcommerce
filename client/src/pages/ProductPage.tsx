@@ -21,7 +21,7 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
     //React Hooks ------------
 
     //Context
-    const { currentProduct, setCurrentProduct } = useProductContext();
+    const { currentProduct, setCurrentProduct, clearProduct } = useProductContext();
 
     //Router
     const navigate = useNavigate();
@@ -30,8 +30,9 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
     //Functions ---------------
 
     //Product Retrieval
-    const getProduct = () => {
-        fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}/${productSlug}`, {
+    const getProduct = async () => {
+        clearProduct();
+        await fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}/${productSlug}`, {
             method: "GET",
             mode: 'cors'
         })
