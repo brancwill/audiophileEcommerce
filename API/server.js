@@ -53,6 +53,7 @@ app.get("/api/:category/:product", (req, res) => {
 })
 
 // Server Start ---------
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, '0.0.0.0', (err) => {
+    if (err) throw err;
     console.log("Connected to server.")
 });
