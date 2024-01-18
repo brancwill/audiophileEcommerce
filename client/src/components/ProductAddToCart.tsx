@@ -5,7 +5,6 @@ import { useState } from "react";
 
 //Component Imports
 import Counter from "./Counter";
-import ProductThumbnail from "./ProductThumbnail";
 
 //Context Imports
 import { useProductContext } from "../context/ProductContext";
