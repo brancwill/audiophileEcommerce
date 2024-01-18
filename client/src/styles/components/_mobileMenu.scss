@@ -1,0 +1,32 @@
+.MobileMenu {
+    .Modal {
+        .overlay {
+            top: 50px;
+            right: 0;
+            .content {
+                max-height: 300px;
+                width: 100%;
+                top: 30px;
+                right: 0px;
+                padding: 5%;
+                border-radius: 0 0 10px 10px;
+                @media screen and (max-width: 850px) {
+                    max-height: 400px;
+                }
+                @media screen and (max-width: 450px) {
+                    height: 800px;
+                    max-height: none;
+                    overflow-x: auto;
+                }
+                .CategoryIconList {
+                    width: 100%;
+                    gap: 10px;
+                    justify-content: center;
+                    @media screen and (max-width: 450px) {
+                        gap: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

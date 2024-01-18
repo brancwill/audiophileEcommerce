@@ -9,6 +9,10 @@ import PageEnder from '../components/PageEnder';
 
 //Component ----------
 const Home = () => {
+
+    // React Hooks ---------
+
+    // Media Query
     
     return (
         <div className="Home">

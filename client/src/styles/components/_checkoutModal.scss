@@ -1,15 +1,39 @@
-@use './colors';
+@use '../generics/colors';
 
 .CheckoutModal {
     .Modal {
         .overlay {
             .content {
                 box-sizing: border-box;
-                max-height: 490px;
-                width: 540px;
-                top: 90px;
-                right: 320px;
+                height: 60%;
+                width: 46%;
+                top: 13%;
+                right: 27%;
                 padding: 2% 5%;
+                @media screen and (min-width: 900px) and (min-height: 900px) {
+                    width: 60%;
+                    height: 45%;
+                    right: 20%;
+                }
+                @media screen and (max-width: 850px) {
+                    width: 70%;
+                    right: 15%;
+                    top: 18%;
+                    height: 45%;
+                    max-height: 650px;
+                }
+                @media screen and (max-width: 950px) and (max-height: 450px) {
+                    width: 70%;
+                    height: 65%;
+                    right: 15%;
+                    top: 17%;
+                }
+                @media screen and (max-width: 450px) {
+                    width: 90%;
+                    right: 5%;
+                    top: 18%;
+                    height: 55%;
+                }
                 .CheckoutSuccess {
                     display: flex;
                     flex-direction: column;
@@ -18,14 +42,35 @@
                     gap: 10px;
                     height: 100%;
                     width: 100%;
+                    @media screen and (max-width: 950px) and (max-height: 450px) {
+                        gap: 0;
+                    }
                     .check {
                         width: 12%;
+                        @media screen and (max-width: 950px) and (max-height: 450px) {
+                            width: 5%;
+                            margin-top: 0;
+                        }
                     }
                     .thanks {
+                        @media screen and (max-width: 950px) and (max-height: 450px) {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 5px;
+                            width: 100%;
+                        }
                         h3 {
                             font-size: 28px;
                             &:nth-child(2) {
                                 margin-top: -5px;
+                                @media screen and (max-width: 950px) and (max-height: 450px) {
+                                    margin-top: 0;
+                                }
+                            }
+                            @media screen and (max-width: 950px) and (max-height: 450px) {
+                                font-size: 22px;
                             }
                         }
                     }
@@ -37,6 +82,9 @@
                         max-height: 210px;
                         display: flex;
                         margin-bottom: 10px;
+                        @media screen and (max-width: 950px) and (max-height: 450px) {
+                            max-height: 170px;
+                        }
                         .detailsLeft {
                             background-color: colors.$light;
                             width: 60%;

@@ -1,17 +1,21 @@
-@use './colors';
+@use '../generics/colors';
 
 .CheckoutPage {
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 60px 100px 100px;
     background-color: colors.$light;
+    @media screen and (max-width: 850px) {
+        padding: 0 5% !important;
+    }
     .backButton {
         width: 65px;
         height: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
+        align-self: flex-start;
         margin-bottom: 40px;
+        margin-top: 40px;
         cursor: pointer;
         &:hover {
             p {
@@ -28,6 +32,11 @@
         justify-content: flex-start;
         align-items: flex-start;
         gap: 3%;
+        margin-bottom: 80px;
+        @media screen and (max-width: 850px) {
+            flex-direction: column;
+            width: 100%;
+        }
         .form, .summary {
             border-radius: 10px
         }
@@ -40,6 +49,12 @@
             align-items: center;
             justify-content: space-evenly;
             gap: 40px;
+            @media screen and (max-width: 850px) {
+                width: 100%;
+            }
+            @media screen and (max-width: 450px) {
+                padding: 5% 10%;
+            }
             .section {
                 width: 100%;
                 .sectionTitle {
@@ -52,6 +67,10 @@
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 1fr 1fr;
                     column-gap: 2%;
+                    @media screen and (max-width: 450px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
                     .InputFull {
                         grid-column-start: 1;
                         grid-column-end: 3;
@@ -65,16 +84,26 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: flex-start;
+                        @media screen and (max-width: 450px) {
+                            flex-direction: column;
+                        }
                         .radios {
                             display: flex;
                             flex-direction: column;
                             gap: 10px;
+                            @media screen and (max-width: 450px) {
+                                width: 100%;
+                                margin-top: 10px;
+                            }
                         }
                     }
                     .paymentMethodInputs {
                         display: flex;
                         justify-content: space-between;
                         gap: 15px;
+                        @media screen and (max-width: 450px) {
+                            flex-direction: column;
+                        }
                         .Input {
                             .aboveBorder {
                                 label {
@@ -90,6 +119,11 @@
             background-color: white;
             width: 30%;
             padding: 2%;
+            @media screen and (max-width: 850px) {
+                width: 100%;
+                margin-top: 40px;
+                padding: 5%;
+            }
             .summaryContainer {
                 display: flex;
                 flex-direction: column;
@@ -138,6 +172,9 @@
                     width: 100%;
                     margin-top: 30px;
                     margin-bottom: 10px;
+                    @media screen and (max-width: 850px) {
+                        height: 48px;
+                    }
                 }
             }
         }

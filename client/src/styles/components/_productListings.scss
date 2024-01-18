@@ -1,0 +1,123 @@
+.productListings {
+    display: flex; 
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -120px;
+    gap: 80px;
+    @media screen and (max-width: 840px) {
+        margin-top: 0;
+        margin-bottom: 100px;
+        gap: 400px;
+    }
+    @media screen and (max-width: 450px) {
+        gap: 250px;
+        margin-bottom: 0;
+    }
+    .ProductListing {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10%;
+        width: 100%;
+        height: 40vw;
+        @media screen and (max-width: 700px) and (min-height: 1150px) {
+            height: 42vw;
+        }
+        @media screen and (max-width: 840px) {
+            flex-direction: column;
+        }
+        @media screen and (max-width: 450px) {
+            height: 600px;
+            gap: 40px;
+        }
+        @media screen and (max-width: 450px) {
+            height: 600px;
+            gap: 40px;
+        }
+        .productListingImage {
+            border-radius: 5px;
+            width: 50%;
+            height: 0;
+            padding-bottom: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-size 500ms ease-in-out;
+            &:hover {
+                background-size: 120%;
+            }
+            @media screen and (max-width: 840px) {
+                width: 100%;
+                background-size: 50%;
+                background-position: center;
+                background-color: #f1f1f1;
+                margin-bottom: 10%;
+                &:hover {
+                    background-size: 60%;
+                }
+            }
+            @media screen and (max-width: 450px) {
+                width: 100%;
+                padding-bottom: 100%;
+                background-size: 100%;
+                &:hover {
+                    background-size: 120%;
+                }
+            }
+        }
+        .productInfo {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            height: 40%;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            gap: 20px;
+            @media screen and (max-width: 890px) {
+                gap: 7%;
+            }
+            @media screen and (max-width: 840px) {
+                width: 80%;
+                text-align: center;
+                align-items: center;
+                gap: 20%;
+            }
+            @media screen and (max-width: 450px) {
+                gap: 30px;
+                width: 100%;
+            }
+            .newProduct {
+                margin-top: 40px;
+                @media screen and (max-width: 700px) and (min-height: 1150px) {
+                        margin-top: 90px;
+                        margin-bottom: -10px;
+                }
+                @media screen and (max-width: 710px) {
+                    margin-top: 120px;
+                }
+                @media screen and (max-width: 525px) {
+                    margin-top: 160px;
+                }
+            }
+            button {
+                @media screen and (max-width: 840px) {
+                    height: 48px;
+                    width: 160px;
+                }
+            }
+        }
+    }
+    .ProductListingLeft {
+        flex-direction: row-reverse;
+    }
+}
+.productListingsReverse {
+    .ProductListing {
+        flex-direction: row-reverse;
+    }
+    .ProductListingLeft {
+        flex-direction: row;
+    }
+}

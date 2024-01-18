@@ -1,5 +1,5 @@
 //Interface Definitions ----------
-interface ImageList {
+export interface ImageList {
     mobile: string,
     tablet: string,
     desktop: string
@@ -37,7 +37,8 @@ export interface Product {
     features: string,
     includes: Included[],
     gallery: Gallery,
-    others: Other[]
+    others: Other[],
+    titleName: string
 }
 export interface ProductState {
     currentProduct: Product;
@@ -86,5 +87,6 @@ export const emptyProduct: Product = {
             desktop: ""
         }
     },
-    others: []
+    others: [],
+    titleName: ""
 }

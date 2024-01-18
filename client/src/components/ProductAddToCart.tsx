@@ -13,6 +13,8 @@ import { useCartContext } from "../context/CartContext";
 
 //Utility Imports
 import { toPriceFormat } from "../utility/Functions";
+import { ImageList } from "../utility/customTypes/ProductTypes";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 //Component ---------------
 const ProductAddToCart = ( props: { toggleCart: Function } ) => {
@@ -22,6 +24,9 @@ const ProductAddToCart = ( props: { toggleCart: Function } ) => {
     //Context
     const { currentProduct } = useProductContext();
     const { updateCartItem } = useCartContext();
+
+    //Media Query
+    const { view } = useMediaQuery();
 
     //State
     const [ count, setCount ] = useState<number>(1);
@@ -37,11 +42,13 @@ const ProductAddToCart = ( props: { toggleCart: Function } ) => {
 
     return (
         <div className="ProductAddToCart">
-            <ProductThumbnail image={currentProduct.image.desktop} productName={currentProduct.name} />
+            <div className="productAddToCartImage" 
+                 style={{ backgroundImage: `url(${currentProduct.image[view as keyof ImageList]}` }}> 
+            </div>
             <div className="productInfo">
                 { currentProduct.new ? <p className="Overline newProduct">New Product</p> : <p> </p> }
                 <div>
-                    <h2>{currentProduct.name}</h2>
+                    <h2>{currentProduct.titleName}</h2>
                     <h2>{currentProduct.category === "speakers" ? "speaker" : currentProduct.category}</h2>
                 </div>
                 <p>{currentProduct.description}</p>

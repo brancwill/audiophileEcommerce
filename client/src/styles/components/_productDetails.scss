@@ -1,0 +1,68 @@
+@use '../generics/colors';
+
+.ProductDetails {
+    display: flex;
+    gap: 10%;
+    width: 100%;
+    @media screen and (max-width: 840px) {
+        flex-direction: column;
+        gap: 100px;
+    }
+    .features, .inBox {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .features {
+        width: 65%;
+        white-space: pre-line;
+        @media screen and (max-width: 840px) {
+            width: 100%;
+        }
+        .featureList {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    .inBox {
+        width: 35%;
+        @media screen and (max-width: 840px) and (min-width: 451px) {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        } 
+        h3 {
+            @media screen and (max-width: 840px) {
+                width: 50%;
+            }  
+        }
+        .items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 100%;
+            @media screen and (max-width: 840px) {
+                width: 50%;
+            }  
+            .item {
+                display: flex;
+                gap: 5%;
+                width: 100%;
+                .quantity, .name {
+                    text-align: left;
+                }
+                .quantity {
+                    color: colors.$accent;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

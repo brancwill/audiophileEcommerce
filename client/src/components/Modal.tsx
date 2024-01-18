@@ -41,7 +41,7 @@ const Modal = ( props: { children: ReactElement, isOpen: boolean, setIsOpen: Fun
     //Handlers
     const handleClickOutside = (event: MouseEvent) => {
         //Checks to see if click occured outside of element.
-        if (elementRef.current && !elementRef.current.contains(event.target as Node)) {
+        if (elementRef.current && !elementRef.current.contains(event.target as Node) && props.type !== "Menu") {
           //If click occurred outside the element,
           
           //If this occurs with the Checkout Modal,

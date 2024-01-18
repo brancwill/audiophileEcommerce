@@ -1,26 +1,38 @@
-@use './fonts';
-@use './colors';
-@use './buttons';
-@use './formElements';
-@use './categoryIcons';
-@use './products';
-@use './pageEnder';
-@use './pages';
-@use './productCategoryPage';
-@use './home';
-@use './root';
-@use './productPage';
-@use './cartModal';
-@use './checkoutPage';
-@use './cartItem';
-@use './modal';
-@use './checkoutModal';
-@use './checkoutItem';
+// Generics
+@use './generics/buttons';
+@use './generics/colors';
+@use './generics/fonts';
+@use './generics/formElements';
+
+// Components
+@use './components/cartItem';
+@use './components/cartModal';
+@use './components/categoryIcons';
+@use './components/checkoutModal';
+@use './components/footer';
+@use './components/gallery';
+@use './components/likeProducts';
+@use './components/mobileMenu';
+@use './components/modal';
+@use './components/navbar';
+@use './components/pageEnder';
+@use './components/productAddToCart';
+@use './components/productDetails';
+@use './components/productListings';
+
+//Pages
+@use './pages/checkoutPage';
+@use './pages/home';
+@use './pages/notFoundPage';
+@use './pages/pages';
+@use './pages/productCategoryPage';
+@use './pages/productPage';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // border: 1px solid red;
 }
 html {
     height: 100%;

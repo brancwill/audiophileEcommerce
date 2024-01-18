@@ -1,0 +1,136 @@
+@use '../generics/colors';
+
+.Footer {
+    height: 385px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10%;
+    @media screen and (max-width: 840px) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: 850px) and (max-height: 400px) {
+        padding: 0 5%;
+    }
+    @media screen and (max-width: 450px) {
+        align-items: center;
+        height: 560px;
+        padding-bottom: 2%;
+    }
+    .footerLeft, .footerRight {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        @media screen and (max-width: 840px) {
+            width: 100%;
+        }
+        .footerNav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 30px;
+            * {
+                text-decoration: none;
+                color: white;
+                transition: color 0.2s;
+                &:hover {
+                    color: colors.$accent;
+                }
+            }
+        }
+        .footerSocials {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 15px;
+            svg {
+                cursor: pointer;
+                transition: color 0.2s;
+                color: white;
+                &:hover {
+                    // filter: brightness(0) saturate(100%) invert(65%) sepia(72%) saturate(747%) hue-rotate(322deg) brightness(87%) contrast(95%);
+                    color: colors.$accent !important;
+                }
+            }
+        }
+    }
+    .footerLeft {
+        gap: 40px;
+        align-items: flex-start;
+        color: #FFFFFF70;
+        @media screen and (max-width: 840px) {
+            gap: 20px;
+        }
+        @media screen and (max-width: 850px) and (max-height: 400px) {
+            gap: 20px;
+        }
+        @media screen and (max-width: 450px) {
+            align-items: center;
+        }
+        .bar {
+            width: 20%;
+            border-top: 4px solid colors.$accent;
+            margin-bottom: 30px;
+            @media screen and (max-width: 450px) {
+                width: 35%;
+            }
+        }
+        .logo {
+            width: 30%;
+            @media screen and (max-width: 450px) {
+                width: 50%;
+            }
+        }
+        .footerNav {
+            @media screen and (min-width: 840px) {
+                display: none;
+            }
+            @media screen and (max-width: 450px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        .footerAbout {
+            @media screen and (max-width: 450px) {
+                text-align: center;
+            }
+        }
+        .footerBottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10%;
+            @media screen and (max-width: 450px) {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .footerSocials {
+                @media screen and (min-width: 840px) {
+                    display: none;
+                }
+            }
+            .footerCopyright {
+                @media screen and (max-width: 450px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .footerRight {
+        align-items: flex-end;
+        gap: 80px;
+        .footerNav {
+            margin-top: 70px;
+            @media screen and (max-width: 840px) {
+                display: none;
+            }
+        }
+        .footerSocials {
+            @media screen and (max-width: 840px) {
+                display: none;
+            }
+        }
+    }
+}

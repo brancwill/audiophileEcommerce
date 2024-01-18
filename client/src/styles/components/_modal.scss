@@ -1,4 +1,6 @@
 .Modal {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
     .overlay {
         position: fixed;
         height: 120%;
@@ -15,5 +17,6 @@
     }
 }
 .displayNone {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
 }

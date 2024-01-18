@@ -1,4 +1,4 @@
-@use './colors';
+@use '../generics/colors';
 
 .Navbar, .Footer {
     width: 100%;
@@ -24,6 +24,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            .menu {
+                display: none;
+                @media screen and (max-width: 850px) {
+                    display: block;
+                    
+                }
+            }
             .logo {
                 cursor: pointer;
             }
@@ -34,6 +41,12 @@
                 gap: 10%;
                 text-align: center;
                 text-decoration: none;
+                @media screen and (max-width: 1000px) {
+                    margin-left: 30%;
+                }
+                @media screen and (max-width: 850px) {
+                    display: none;
+                }
                 .navLink {
                     color: white;
                     transition: color 0.2s;
@@ -59,65 +72,6 @@
         }
         .cartToggleDisabled {
             display: none;
-        }
-    }
-}
-.Footer {
-    height: 365px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 10%;
-    .footerLeft, .footerRight {
-        display: flex;
-        flex-direction: column;
-        width: 40%;
-    }
-    .footerLeft {
-        gap: 40px;
-        align-items: flex-start;
-        color: #FFFFFF70;
-        .bar {
-            width: 20%;
-            border-top: 4px solid colors.$accent;
-            margin-bottom: 30px;
-        }
-        .logo {
-            width: 30%;
-        }
-    }
-    .footerRight {
-        align-items: flex-end;
-        gap: 80px;
-        .footerNav {
-            margin-top: 70px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 30px;
-            * {
-                text-decoration: none;
-                color: white;
-                transition: color 0.2s;
-                &:hover {
-                    color: colors.$accent;
-                }
-            }
-        }
-        .footerSocials {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 15px;
-            svg {
-                cursor: pointer;
-                transition: color 0.2s;
-                color: white;
-                &:hover {
-                    // filter: brightness(0) saturate(100%) invert(65%) sepia(72%) saturate(747%) hue-rotate(322deg) brightness(87%) contrast(95%);
-                    color: colors.$accent !important;
-                }
-            }
         }
     }
 }

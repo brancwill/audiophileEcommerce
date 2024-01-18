@@ -4,12 +4,12 @@
 import CategoryIcon from "./CategoryIcon";
 
 //Component
-const CategoryIconList = () => {
+const CategoryIconList = ( props: { setIsOpen?: Function } ) => {
     return (
         <div className="CategoryIconList">
-            <CategoryIcon image={"/assets/shared/desktop/image-category-thumbnail-headphones.png"} title="headphones"/>
-            <CategoryIcon image={"/assets/shared/desktop/image-category-thumbnail-speakers.png"} title="speakers"/>
-            <CategoryIcon image={"/assets/shared/desktop/image-category-thumbnail-earphones.png"} title="earphones"/>
+            <CategoryIcon setIsOpen={props.setIsOpen} image={"/assets/shared/desktop/image-category-thumbnail-headphones.png"} title="headphones"/>
+            <CategoryIcon setIsOpen={props.setIsOpen} image={"/assets/shared/desktop/image-category-thumbnail-speakers.png"} title="speakers"/>
+            <CategoryIcon setIsOpen={props.setIsOpen} image={"/assets/shared/desktop/image-category-thumbnail-earphones.png"} title="earphones"/>
         </div>
     );
 };

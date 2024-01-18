@@ -219,11 +219,11 @@ const CheckoutPage = () => {
         }
     }
     const handleSubmit: Function = (): void => {
-        //Checks if information in inputs is valid.
+        // Checks if information in inputs is valid.
         if ( !runValidationCheck() ) {
             //If not, exits function.
            return 
-        } else{
+        } else {
             //If so, opens success window, and passes
             //form data to console.
             setIsOpen(!isOpen);

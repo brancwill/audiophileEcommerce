@@ -1,12 +1,15 @@
+// Imports --------------
 const express = require('express');
 const cors = require("cors");
 const mysql = require("mysql2");
-// import { Product } from '../client/src/utility/customTypes/ProductTypes';
 
+// Variables ------------
 const app = express();
 
+// Middleware -------------
 app.use(cors())
 
+// MySQL Connection ---------
 const db = mysql.createConnection({
     host: "localhost",
     user: "Brandon",
@@ -14,6 +17,7 @@ const db = mysql.createConnection({
     database: "data"
 });
 
+// Endpoints -------------
 app.get("/api/:category", (req, res) => {
     const query = `SELECT * FROM products WHERE category='${req.params.category}'`;
     
@@ -37,6 +41,7 @@ app.get("/api/:category/:product", (req, res) => {
     })
 })
 
+// Server Start ---------
 app.listen(8800, () => {
     console.log("Connected to server.")
 });

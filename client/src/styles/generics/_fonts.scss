@@ -6,6 +6,12 @@ h1 {
     letter-spacing: 2px;
     line-height: 58px;
     text-transform: uppercase;
+    @media screen and (max-width: 850px) {
+        font-size: 46px !important;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 36px !important;
+    }
 }
 h2 {
     font: 700 40px "Manrope";
@@ -24,6 +30,9 @@ h4 {
     letter-spacing: 2px;
     line-height: 38px;
     text-transform: uppercase;
+    @media screen and (max-width: 645px) {
+        font-size: 20px;
+    }
 }
 h5 {
     font: 700 24px "Manrope";
@@ -36,6 +45,12 @@ h6 {
     letter-spacing: 1.3px;
     line-height: 24px;
     text-transform: uppercase;
+    @media screen and (max-width: 645px) {
+        font-size: 14px;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 20px;
+    }
 }
 .Overline {
     font: 400 14px "Manrope";
