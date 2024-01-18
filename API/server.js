@@ -6,6 +6,7 @@ require('dotenv').config();
 
 // Variables ------------
 const app = express();
+const PORT = process.env.PORT || 10000;
 
 // Middleware -------------
 app.use(cors())
@@ -52,6 +53,6 @@ app.get("/api/:category/:product", (req, res) => {
 })
 
 // Server Start ---------
-app.listen(8800, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log("Connected to server.")
 });
