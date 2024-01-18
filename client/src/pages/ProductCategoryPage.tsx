@@ -16,7 +16,10 @@ import { useProductContext } from "../context/ProductContext";
 const ProductCategoryPage = () => {
 
     const getProducts = () => {
-        fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}`)
+        fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}`, {
+            method: "GET",
+            mode: 'cors'
+        })
             .then(res => res.json())
             .then(data => setCurrentCategory(data));
     }
