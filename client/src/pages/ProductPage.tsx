@@ -31,7 +31,7 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
 
     //Product Retrieval
     const getProduct = () => {
-        fetch(`http://localhost:8800/api/${productCategory}/${productSlug}`)
+        fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}/${productSlug}`)
             .then(res => res.json())
             .then(data => setCurrentProduct(data[0]))
     }
