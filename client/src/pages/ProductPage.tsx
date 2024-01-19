@@ -36,7 +36,7 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
 
     // Handles fetched data, and sets isLoaded for animation.
     const handleAfterFetch: Function = (data: Product[]): void => {
-        if ( data !== undefined ) {
+        if ( data.length > 0 ) {
             setCurrentProduct(data[0]);
             onComplete();
         } else {
@@ -66,6 +66,7 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
     }
 
     useEffect(() => {
+        console.log(currentProduct !== emptyProduct)
         getProduct();
     }, [productSlug])
 
@@ -79,7 +80,7 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
             <div className="backButton" onClick={() => handleGoBack()}>
                 <p>Go Back</p>
             </div>
-            { currentProduct !== emptyProduct ?
+            { currentProduct && currentProduct !== emptyProduct ?
                     <div>
                             <ProductAddToCart toggleCart={props.toggleCart} />
                     </div>
