@@ -14,6 +14,11 @@ import ProductDetails from "../components/ProductDetails";
 
 //Context
 import { useProductContext } from "../context/ProductContext";
+import { emptyProduct } from "../utility/customTypes/ProductTypes";
+import Loader from "../components/Loader";
+
+// Utility
+import { Product } from "../utility/customTypes/ProductTypes";
 
 //Component ----------------
 const ProductPage = ( props: { toggleCart: Function } ) => {
@@ -29,6 +34,16 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
     
     //Functions ---------------
 
+    // Handles fetched data, and sets isLoaded for animation.
+    const handleAfterFetch: Function = (data: Product[]): void => {
+        if ( data !== undefined ) {
+            setCurrentProduct(data[0]);
+            onComplete();
+        } else {
+            navigate("/page-not-found");
+        }
+    }
+
     //Product Retrieval
     const getProduct = async () => {
         clearProduct();
@@ -37,18 +52,21 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
             mode: 'cors'
         })
             .then(res => res.json())
-            .then(data => setCurrentProduct(data[0]))
+            .then(data => handleAfterFetch(data))
+    }
+
+    const onComplete: Function = (): void => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 200,
+                left: 0,
+                behavior: "smooth"
+            });
+        }, 200)
     }
 
     useEffect(() => {
-        //If product is found, populates page.
-        if(currentProduct !== undefined) {
-            getProduct();
-        }
-        //If not, redirects to "Not Found" page.
-        else {
-            navigate("/page-not-found");
-        }
+        getProduct();
     }, [productSlug])
 
     const handleGoBack: Function = ():void => {
@@ -61,7 +79,15 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
             <div className="backButton" onClick={() => handleGoBack()}>
                 <p>Go Back</p>
             </div>
-            <ProductAddToCart toggleCart={props.toggleCart} />
+            { currentProduct !== emptyProduct ?
+                    <div>
+                            <ProductAddToCart toggleCart={props.toggleCart} />
+                    </div>
+                :
+                    <div>
+                            <Loader />
+                    </div>
+            }
             <ProductDetails />
             <Gallery />
             <LikeProducts />
