@@ -74,7 +74,7 @@
     border: 1.5px solid colors.$accent !important;
 }
 .Counter, .CartCounter {
-    background-color: colors.$light;
+    background-color: colors.$lightBase;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

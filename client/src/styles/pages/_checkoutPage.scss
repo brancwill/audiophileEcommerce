@@ -3,7 +3,7 @@
 .CheckoutPage {
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: colors.$light;
+    background-color: colors.$lightBase;
     @media screen and (max-width: 850px) {
         padding: 0 5% !important;
     }

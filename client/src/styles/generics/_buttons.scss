@@ -21,12 +21,12 @@ button {
     }
 }
 .button2 {
-    color: colors.$dark;
+    color: colors.$darkBase;
     background-color: transparent;
-    border: 1px solid colors.$dark;
+    border: 1px solid colors.$darkBase;
     &:hover {
         color: colors.$background;
-        background-color: colors.$dark;
+        background-color: colors.$darkBase;
     }
 }
 .button3 {
@@ -43,7 +43,7 @@ button {
 }
 .button4 {
     color: white;
-    background-color: colors.$dark;
+    background-color: colors.$darkBase;
     &:hover, &:focus {
         background-color: colors.$darkHilight;
     }

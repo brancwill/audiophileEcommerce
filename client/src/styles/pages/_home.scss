@@ -9,7 +9,7 @@
         width: 100%;
         padding-left: 10%;
         background-image: url('../assets/home/desktop/image-hero.jpg');
-        background-color: colors.$dark;
+        background-color: colors.$darkBase;
         background-size: 100%;
         background-position: right 25% top 75%;
         background-repeat: no-repeat;
@@ -309,7 +309,7 @@
                     }
                 }
                 .homeProductContainer {
-                    background-color: colors.$light;
+                    background-color: colors.$lightBase;
                     justify-content: center;
                     gap: 10%;
                     padding-left: 10%;

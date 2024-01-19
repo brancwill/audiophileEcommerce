@@ -86,7 +86,7 @@
                             max-height: 170px;
                         }
                         .detailsLeft {
-                            background-color: colors.$light;
+                            background-color: colors.$lightBase;
                             width: 60%;
                             padding: 20px 5%;
                             display: flex;
@@ -129,7 +129,7 @@
                             }
                         }
                         .detailsRight {
-                            background-color: colors.$dark;
+                            background-color: colors.$darkBase;
                             width: 40%;
                             border-radius: 0 10px 10px 0;
                             display: flex;

@@ -63,7 +63,7 @@
         gap: 0;
         align-items: center;
         padding-bottom: 2%;
-        background: linear-gradient(180deg, rgba(0,0,0,0) 30%, colors.$light 30%);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 30%, colors.$lightBase 30%);
         @media screen and (max-width: 840px) {
             gap: 15px;
         }
@@ -72,7 +72,7 @@
         }
         @media screen and (max-width: 450px) {
             max-height: 420px;
-            background: linear-gradient(180deg, rgba(0,0,0,0) 40%, colors.$light 30%);
+            background: linear-gradient(180deg, rgba(0,0,0,0) 40%, colors.$lightBase 30%);
         }
         h6 {
             @media screen and (min-width: 1201px) {
