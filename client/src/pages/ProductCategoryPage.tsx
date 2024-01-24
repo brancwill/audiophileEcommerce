@@ -80,7 +80,7 @@ const ProductCategoryPage = () => {
                 <div className={ productCategory !== 'speakers' ? "productListings" : "productListings productListingsReverse"}>
                             {
                                 currentCategory && currentCategory.length > 0 ? 
-                                    <div>
+                                    <div className="listingGroup">
                                         {
                                             currentCategory.map((product, index) => {
                                                 return <ProductListing product={product} 
