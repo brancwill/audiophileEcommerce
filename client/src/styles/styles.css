@@ -1598,6 +1598,12 @@ input::placeholder, .Radio::placeholder {
     gap: 400px;
   }
 }
+@media screen and (max-width: 700px) and (max-height: 400px) {
+  .productListings {
+    margin-top: -120px;
+    margin-bottom: 0;
+  }
+}
 @media screen and (max-width: 450px) {
   .productListings {
     gap: 250px;
@@ -1612,6 +1618,11 @@ input::placeholder, .Radio::placeholder {
   width: 100%;
   height: 40vw;
 }
+@media screen and (max-width: 700px) and (max-height: 400px) {
+  .productListings .ProductListing:last-child .productListingImage {
+    margin-bottom: -70px;
+  }
+}
 @media screen and (max-width: 700px) and (min-height: 1150px) {
   .productListings .ProductListing {
     height: 42vw;
@@ -1622,10 +1633,10 @@ input::placeholder, .Radio::placeholder {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 700px) and (max-height: 400px) {
   .productListings .ProductListing {
-    height: 600px;
-    gap: 40px;
+    height: auto;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -1690,6 +1701,11 @@ input::placeholder, .Radio::placeholder {
     text-align: center;
     align-items: center;
     gap: 20%;
+  }
+}
+@media screen and (max-width: 700px) and (max-height: 400px) {
+  .productListings .ProductListing .productInfo {
+    gap: 20px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -2351,6 +2367,11 @@ input::placeholder, .Radio::placeholder {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 700px) and (max-height: 400px) {
+  .ProductCategoryPage .underBar {
+    gap: 80px;
+  }
 }
 .ProductCategoryPage .pageTitle {
   color: white;
