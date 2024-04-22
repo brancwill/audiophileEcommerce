@@ -3,7 +3,7 @@ const Loader = () => {
         <div className="Loader">
             <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
             <h5>Loading</h5>
-            <p>(Please bear with the potentially long load time, I'm using free database hosting)</p>
+            {/* <p>(Please bear with the potentially long load time, I'm using free database hosting)</p> */}
         </div>
     );
 };

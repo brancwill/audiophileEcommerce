@@ -89,7 +89,8 @@
           "desktop": "/assets/shared/desktop/image-zx9-speaker.jpg"
         }
       }
-    ]
+    ],
+    "titleName": "YX1 Wireless"
   },
   {
     "id": 2,
@@ -170,14 +171,15 @@
       {
         "slug": "zx9-speaker",
         "name": "ZX9 Speaker",
-        "category": "headphones",
+        "category": "speakers",
         "image": {
           "mobile": "/assets/shared/mobile/image-zx9-speaker.jpg",
           "tablet": "/assets/shared/tablet/image-zx9-speaker.jpg",
           "desktop": "/assets/shared/desktop/image-zx9-speaker.jpg"
         }
       }
-    ]
+    ],
+    "titleName": "XX59"
   },
   {
     "id": 3,
@@ -265,7 +267,8 @@
           "desktop": "/assets/shared/desktop/image-zx9-speaker.jpg"
         }
       }
-    ]
+    ],
+    "titleName": "XX99 Mark I"
   },
   {
     "id": 4,
@@ -357,7 +360,8 @@
           "desktop": "/assets/shared/desktop/image-zx9-speaker.jpg"
         }
       }
-    ]
+    ],
+    "titleName": "XX99 Mark II"
   },
   {
     "id": 5,
@@ -449,7 +453,8 @@
           "desktop": "/assets/shared/desktop/image-xx59-headphones.jpg"
         }
       }
-    ]
+    ],
+    "titleName": "ZX7"
   },
   {
     "id": 6,
@@ -541,6 +546,7 @@
           "desktop": "/assets/shared/desktop/image-xx59-headphones.jpg"
         }
       }
-    ]
+    ],
+    "titleName": "ZX9"
   }
 ]

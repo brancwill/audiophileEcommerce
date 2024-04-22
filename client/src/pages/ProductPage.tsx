@@ -19,6 +19,7 @@ import Loader from "../components/Loader";
 
 // Utility
 import { Product } from "../utility/customTypes/ProductTypes";
+import productData from "../data.json"
 
 //Component ----------------
 const ProductPage = ( props: { toggleCart: Function } ) => {
@@ -35,24 +36,35 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
     //Functions ---------------
 
     // Handles fetched data, and sets isLoaded for animation.
-    const handleAfterFetch: Function = (data: Product[]): void => {
-        if ( data.length > 0 ) {
-            setCurrentProduct(data[0]);
-            onComplete();
-        } else {
-            navigate("/page-not-found");
-        }
-    }
+    // const handleAfterFetch: Function = (data: Product[]): void => {
+    //     if ( data.length > 0 ) {
+    //         setCurrentProduct(data[0]);
+    //         onComplete();
+    //     } else {
+    //         navigate("/page-not-found");
+    //     }
+    // }
 
     //Product Retrieval
-    const getProduct = async () => {
+    // const getProduct = async () => {
+    //     clearProduct();
+    //     await fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}/${productSlug}`, {
+    //         method: "GET",
+    //         mode: 'cors'
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => handleAfterFetch(data))
+    // }
+
+    const getProduct = () => {
         clearProduct();
-        await fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}/${productSlug}`, {
-            method: "GET",
-            mode: 'cors'
+        const product = productData.find((product: Product) => {
+            return product.slug === productSlug
         })
-            .then(res => res.json())
-            .then(data => handleAfterFetch(data))
+        if (product) {
+            setCurrentProduct(product);
+        }
+        onComplete();
     }
 
     const onComplete: Function = (): void => {
@@ -66,7 +78,6 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
     }
 
     useEffect(() => {
-        console.log(currentProduct !== emptyProduct)
         getProduct();
     }, [productSlug])
 

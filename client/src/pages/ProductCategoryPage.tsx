@@ -14,26 +14,38 @@ import { useProductContext } from "../context/ProductContext";
 import Loader from "../components/Loader";
 import { Product } from "../utility/customTypes/ProductTypes";
 
+// Utility Imports
+import productData from "../data.json";
+
 //Component --------------
 const ProductCategoryPage = () => {
 
     // Functions -------------
 
     // Handles fetched data, and sets isLoaded for animation.
-    const handleAfterFetch = (data: Product[]) => {
-        setCurrentCategory(data);
-        onComplete();
-    }
+    // const handleAfterFetch = (data: Product[]) => {
+    //     setCurrentCategory(data);
+    //     onComplete();
+    // }
 
     // Fetches product data
-    const getProducts = async () => {
+    // const getProducts = async () => {
+    //     clearCategory();
+    //     await fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}`, {
+    //         method: "GET",
+    //         mode: 'cors'
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => handleAfterFetch(data));
+    // }
+
+    const getProducts = () => {
         clearCategory();
-        await fetch(`https://mockecommerceapi.onrender.com/api/${productCategory}`, {
-            method: "GET",
-            mode: 'cors'
-        })
-            .then(res => res.json())
-            .then(data => handleAfterFetch(data));
+        const category: Product[] = productData.filter((prod: Product) => {
+            return prod.category === productCategory
+        });
+        setCurrentCategory(category);
+        onComplete();
     }
 
     const onComplete: Function = (): void => {
