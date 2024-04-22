@@ -31,7 +31,7 @@ const ProductPage = ( props: { toggleCart: Function } ) => {
 
     //Router
     const navigate = useNavigate();
-    let { productCategory, productSlug } = useParams();
+    let { productSlug } = useParams();
     
     //Functions ---------------
 
